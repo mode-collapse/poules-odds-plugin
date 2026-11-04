@@ -1,0 +1,7 @@
+# saved poules.com pages used for local testing (large, contain account data)
+poules_sample.html
+poules_sample_files/
+poules_first_iteration.html
+poules_first_iteration_files/
+.DS_Store
+node_modules/

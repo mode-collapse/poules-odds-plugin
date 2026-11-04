@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Poules Odds",
+  "version": "0.1.0",
+  "description": "Shows bookmaker odds next to Champions League matches on poules.com.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.the-odds-api.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://poules.com/*", "https://*.poules.com/*"],
+      "js": ["teams.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "action": { "default_title": "Poules Odds", "default_popup": "options.html" }
+}
